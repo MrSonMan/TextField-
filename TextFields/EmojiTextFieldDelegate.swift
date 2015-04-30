@@ -11,7 +11,7 @@ import UIKit
 
 class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
     
-    let translations = [String : String]()
+     var translations = [String : String]() // var로 수정해야 함.. 왜 let으로 했지???
     
     override init() {
         super.init()
@@ -58,7 +58,7 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
         // If we have replaced an emoji, then we directly edit the text field
         // Otherwise we allow the proposed edit.
         if replacedAnEmoji {
-            textField.text = newText
+            textField.text = String(newText)   // newText가 NSString이어서 String으로 바꿔줌...
             return false
         } else {
             return true
