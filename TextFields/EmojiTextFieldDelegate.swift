@@ -30,7 +30,6 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
-        var replacedAnEmoji = false
         var emojiStringRange: NSRange
         
         // Construct the text that will be in the field if this change is accepted
@@ -39,30 +38,18 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
 
         // For each dictionary entry in translations, pull out a string to search for
         // and an emoji to replace it with
-        
         for (emojiString, emoji) in translations {
-        
-            // Search for all occurances of key (ie. "dog"), and replace with emoji (ie. 🐶)
-            do {
-                emojiStringRange = newText.rangeOfString(emojiString, options: NSStringCompareOptions.CaseInsensitiveSearch)
             
-                // found one
-                if emojiStringRange.location != NSNotFound {
-                    newText = newText.stringByReplacingCharactersInRange(emojiStringRange, withString: emoji)
-                    replacedAnEmoji = true
-                }
-                
-            } while emojiStringRange.location != NSNotFound
+            emojiStringRange = newText.rangeOfString(emojiString, options: NSStringCompareOptions.CaseInsensitiveSearch)
+           
+            if emojiStringRange.location != NSNotFound {
+                newText = newText.stringByReplacingCharactersInRange(emojiStringRange, withString: emoji)
+                textField.text = String(newText)
+                return false  // 여기서 return false를 안하면 이모티콘 바뀌고 마지막 글자 또 적히네...
+            }
         }
 
-        // If we have replaced an emoji, then we directly edit the text field
-        // Otherwise we allow the proposed edit.
-        if replacedAnEmoji {
-            textField.text = String(newText)   // newText가 NSString이어서 String으로 바꿔줌...
-            return false
-        } else {
-            return true
-        }
+        return true
         
     }
     
