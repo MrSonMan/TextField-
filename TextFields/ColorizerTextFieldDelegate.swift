@@ -68,6 +68,7 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
     */
     
     func blendColorArray(colors: [UIColor]) -> UIColor {
+        
         var colorComponents: [CGFloat] = [CGFloat](count: 4, repeatedValue: 0.0)
         
         for color in colors {

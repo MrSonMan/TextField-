@@ -11,7 +11,7 @@ import UIKit
 
 class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
     
-     var translations = [String : String]() // var로 수정해야 함.. 왜 let으로 했지???
+     var translations = [String : String]()    // var로 수정해야 함.. 왜 강의에선 let으로 했지???
     
     override init() {
         super.init()
@@ -25,19 +25,13 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
         translations["cat"] = "\u{E04F}"
     }
     
-    
-    
-    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         var emojiStringRange: NSRange
         
-        // Construct the text that will be in the field if this change is accepted
         var newText = textField.text as NSString
         newText = newText.stringByReplacingCharactersInRange(range, withString: string)
 
-        // For each dictionary entry in translations, pull out a string to search for
-        // and an emoji to replace it with
         for (emojiString, emoji) in translations {
             
             emojiStringRange = newText.rangeOfString(emojiString, options: NSStringCompareOptions.CaseInsensitiveSearch)
@@ -48,9 +42,7 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
                 return false  // 여기서 return false를 안하면 이모티콘 바뀌고 마지막 글자 또 적히네...
             }
         }
-
         return true
-        
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
