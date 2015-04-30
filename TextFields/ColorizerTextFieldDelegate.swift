@@ -11,7 +11,6 @@ import UIKit
 
 class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
     
-    
     let colors : [String : UIColor] = [
         "red": UIColor.redColor(),
         "orange":  UIColor.orangeColor(),
@@ -33,22 +32,17 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         var colorsInTheText = [UIColor]()
-        var newText: NSString
         
-        // Construct the text that will be in the field if this change is accepted
+        var newText: NSString
         newText = textField.text
         newText = newText.stringByReplacingCharactersInRange(range, withString: string)
         
-        // For each dictionary entry in translations, pull out a string to search for
-        
         for (key, color) in self.colors {
             
-            if newText.rangeOfString(key, options: NSStringCompareOptions.CaseInsensitiveSearch).location != NSNotFound {
+            if newText.rangeOfString(key).location != NSNotFound {
                 colorsInTheText.append(color)
             }
         }
-        
-        // If we found any colors then blend them and set the text color
         
         if colorsInTheText.count > 0 {
             textField.textColor = self.blendColorArray(colorsInTheText)
@@ -57,11 +51,6 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true;
-    }
     
     /**
     * accepts an array of collors, and return a blend of all the elements
@@ -90,6 +79,11 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
         }
         
         return UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: colorComponents[3])
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
    
     func textFieldShouldClear(textField: UITextField) -> Bool {
