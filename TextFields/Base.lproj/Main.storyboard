@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-35-VHU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emoji Text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-35-VHU">
                                 <rect key="frame" x="16" y="28" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CnV-IE-zXV"/>
@@ -25,7 +25,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FND-fQ-FKU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Colorizer Text" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FND-fQ-FKU">
                                 <rect key="frame" x="16" y="66" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ywh-81-o7i"/>
@@ -33,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-lW-EqZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Character" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-lW-EqZ">
                                 <rect key="frame" x="16" y="104" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cZ4-Ff-5vX"/>
@@ -51,6 +51,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Random Color" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NYT-U8-fd7">
+                                <rect key="frame" x="16" y="209" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAe-wx-CpM">
+                                <rect key="frame" x="16" y="275" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Money" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTK-FV-rbK">
+                                <rect key="frame" x="16" y="328" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyboard On/Off" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NBn-wG-czC">
+                                <rect key="frame" x="16" y="379" width="225" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zz7-iJ-6cL">
+                                <rect key="frame" x="249" y="378" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
@@ -69,9 +92,13 @@
                     </view>
                     <connections>
                         <outlet property="characterCountLabel" destination="vX4-tH-Tjk" id="aMf-he-o0G"/>
+                        <outlet property="keyboardOnOff" destination="NBn-wG-czC" id="Ti8-6g-uZt"/>
+                        <outlet property="maxNumber" destination="aAe-wx-CpM" id="skV-zZ-lf8"/>
+                        <outlet property="money" destination="GTK-FV-rbK" id="rnZ-Q2-NMh"/>
                         <outlet property="textField1" destination="b5d-35-VHU" id="JJa-zq-XKJ"/>
                         <outlet property="textField2" destination="FND-fQ-FKU" id="wKW-y7-Gz9"/>
                         <outlet property="textField3" destination="x8x-lW-EqZ" id="D4x-7k-BPl"/>
+                        <outlet property="textField4" destination="NYT-U8-fd7" id="UlO-wr-Am5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

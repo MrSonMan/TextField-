@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358AE49E1AF3B00000D3D478 /* RandomColorTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AE49D1AF3B00000D3D478 /* RandomColorTextFieldDelegate.swift */; };
+		358AE4A01AF3BC0700D3D478 /* MaxNumberTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AE49F1AF3BC0700D3D478 /* MaxNumberTextFieldDelegate.swift */; };
+		358AE4A21AF3BC3D00D3D478 /* MoneyTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AE4A11AF3BC3D00D3D478 /* MoneyTextFieldDelegate.swift */; };
+		358AE4A41AF3BC6200D3D478 /* KeyboardOnOffDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AE4A31AF3BC6200D3D478 /* KeyboardOnOffDelegate.swift */; };
 		4D08C4701A126D0300A95F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C46F1A126D0300A95F43 /* AppDelegate.swift */; };
 		4D08C4721A126D0300A95F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C4711A126D0300A95F43 /* ViewController.swift */; };
 		4D08C4751A126D0300A95F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D08C4731A126D0300A95F43 /* Main.storyboard */; };
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		358AE49D1AF3B00000D3D478 /* RandomColorTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColorTextFieldDelegate.swift; sourceTree = "<group>"; };
+		358AE49F1AF3BC0700D3D478 /* MaxNumberTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxNumberTextFieldDelegate.swift; sourceTree = "<group>"; };
+		358AE4A11AF3BC3D00D3D478 /* MoneyTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyTextFieldDelegate.swift; sourceTree = "<group>"; };
+		358AE4A31AF3BC6200D3D478 /* KeyboardOnOffDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardOnOffDelegate.swift; sourceTree = "<group>"; };
 		4D08C46A1A126D0300A95F43 /* TextFields.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFields.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D08C46E1A126D0300A95F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D08C46F1A126D0300A95F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +130,10 @@
 			children = (
 				4D08C48F1A126EC400A95F43 /* EmojiTextFieldDelegate.swift */,
 				4D08C4911A12860200A95F43 /* ColorizerTextFieldDelegate.swift */,
+				358AE49D1AF3B00000D3D478 /* RandomColorTextFieldDelegate.swift */,
+				358AE49F1AF3BC0700D3D478 /* MaxNumberTextFieldDelegate.swift */,
+				358AE4A11AF3BC3D00D3D478 /* MoneyTextFieldDelegate.swift */,
+				358AE4A31AF3BC6200D3D478 /* KeyboardOnOffDelegate.swift */,
 			);
 			name = "Text Field Delegates";
 			sourceTree = "<group>";
@@ -226,10 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358AE4A21AF3BC3D00D3D478 /* MoneyTextFieldDelegate.swift in Sources */,
+				358AE4A01AF3BC0700D3D478 /* MaxNumberTextFieldDelegate.swift in Sources */,
+				358AE4A41AF3BC6200D3D478 /* KeyboardOnOffDelegate.swift in Sources */,
 				4D08C4921A12860200A95F43 /* ColorizerTextFieldDelegate.swift in Sources */,
 				4D08C4721A126D0300A95F43 /* ViewController.swift in Sources */,
 				4D08C4701A126D0300A95F43 /* AppDelegate.swift in Sources */,
 				4D08C4901A126EC400A95F43 /* EmojiTextFieldDelegate.swift in Sources */,
+				358AE49E1AF3B00000D3D478 /* RandomColorTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +437,7 @@
 				4D08C48B1A126D0300A95F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D08C48C1A126D0300A95F43 /* Build configuration list for PBXNativeTarget "TextFieldsTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +446,7 @@
 				4D08C48E1A126D0300A95F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

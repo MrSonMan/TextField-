@@ -25,10 +25,6 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
         "white" : UIColor.whiteColor()
     ]
     
-    /**
-    * Examines the new string whenever the text changes. Finds color-words, blends them, and set the text color
-    */
-    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         var colorsInTheText = [UIColor]()
@@ -50,7 +46,6 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
         
         return true
     }
-    
     
     /**
     * accepts an array of collors, and return a blend of all the elements
@@ -83,10 +78,11 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true;
+        return false;
     }
    
     func textFieldShouldClear(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true;
     }
     
