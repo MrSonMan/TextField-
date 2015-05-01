@@ -22,6 +22,7 @@ class MaxNumberTextFieldDelegate: NSObject, UITextFieldDelegate {
         }
     }
     
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.text = ""
     }
