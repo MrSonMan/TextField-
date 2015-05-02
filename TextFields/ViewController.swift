@@ -18,8 +18,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField4: UITextField!
     @IBOutlet weak var maxNumber: UITextField!
     @IBOutlet weak var money: UITextField!
-    @IBOutlet weak var keyboardOnOff: UITextField!
     
+    @IBOutlet weak var switchOnOff: UISwitch!
     
     // Text Field Delegate objects
     let emojiDelegate = EmojiTextFieldDelegate()
@@ -27,7 +27,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let randomColorDelegate = RandomColorTextFieldDelegate()
     let maxNumberDelegate = MaxNumberTextFieldDelegate()
     let moneyDelegate = MoneyTextFieldDelegate()
- //   let keyboardOnOffDelegate = KeyboardOnOffDelegate()
     
     // Life Cycle Methods
     
@@ -44,12 +43,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.textField4.delegate = randomColorDelegate
         self.maxNumber.delegate = maxNumberDelegate
         self.money.delegate = moneyDelegate
-  //      self.keyboardOnOff.delegate = keyboardOnOffDelegate
+        switchOnOff.setOn(false, animated: false)
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return switchOnOff.on
     }
 
-    
-    // Text Field Delegate Methods
-    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 
         println(string)
@@ -66,5 +66,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // returning true gives the text field permission to change its text
         return true;
     }
+    
+    @IBAction func switchAction(sender: UISwitch) {
+        if !switchOnOff.on{
+            self.textField3.resignFirstResponder()
+            self.textField3.text = ""
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
